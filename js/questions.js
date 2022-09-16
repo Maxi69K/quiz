@@ -1,0 +1,82 @@
+class Question {
+    constructor(text, options, answer, points, category) {
+        this.text = text;
+        this.options = options;
+        this.answer = answer;
+        this.points = points;
+        this.category = category;
+    }
+}
+
+const questions = [
+    new Question(`HTML je?`, [`Programski jezik`, `Jezik za oznacavanje`, `Tekst editor`, `Nesto drugo`], `Jezik za oznacavanje`, 5, `HTML`), // HTML 15
+    new Question(`Kada želimo da zatvorimo tag koristicemo?`, [`Kosu crtu`, `Znak uzvika`, `Tacku`, `Zarez`], `Kosu crtu`, 5, `HTML`),
+    new Question(`Markirajuci tagovi moraju biti?`, [`Otvoreni`, `Zatvoreni`, `Povezani`, `Isti`], `Zatvoreni`, 5, `HTML`),
+    new Question(`Head je?`, [`Telo stranice`, `Glava stranice`, `Podnozje stranice`, `Centar stranice`], `Glava stranice`, 5, `HTML`),
+    new Question(`Body je?`, [`Glava stranice`, `Telo stranice`, `Podnozje stranice`, `Centar stranice`], `Telo stranice`, 5, `HTML`),
+    new Question(`DOCTYPE je?`, [`HTML element`, `Deklaracija`, `Tag`, `Link`], `Deklaracija`, 5, `HTML`),
+    new Question(`Meta tagovi su?`, [`Markirajuci tagovi`, `Samozatvarajuci tagovi`, `Inputi`, `Linkovi`], `Samozatvarajuci tagovi`, 5, `HTML`),
+    new Question(`Samozatvarajuci tagovi se?`, [`Zatvaraju`, `Ne zatvaraju`, `Bolduju`, `Podvlace`], `Ne zatvaraju`, 5, `HTML`),
+    new Question(`Koliko nivoa naslova postoji?`, [`Tri`, `Sest`, `Pet`, `Cetiri`], `Sest`, 5, `HTML`),
+    new Question(`Uredjena lista pise se sa?`, [`ul`, `ol`, `dl`, `hl`], `ol`, 5, `HTML`),
+    new Question(`Sta linkovi moraju da sadrze?`, [`src`, `class`, `id`, `href`], `href`, 5, `HTML`),
+    new Question(`U img tagu alt je?`, [`Pozeljan`, `Obavezan`, `Ne sme biti`, `Nepozeljan`], `Obavezan`, 5, `HTML`),
+    new Question(`HTML entiteti su?`, [`Tagovi`, `Prazan prostor`, `Specijalni karakteri`, `Podvuceni znakovi`], `Specijalni karakteri`, 5, `HTML`),
+    new Question(`Tabele se kreiraju pomocu taga?`, [`thead`, `tbody`, `tfoot`, `table`], `table`, 5, `HTML`),
+    new Question(`Polja za unos podataka su?`, [`lebel`, `radio`, `range`, `input`], `input`, 5, `HTML`),
+    new Question(`CSS je računarski jezik koji pripada porodici style sheet jezika?`, [`Da`, `Ne`, `Nesto drugo`, `Nisam suguran`], `Da`, 5, `CSS`), // CSS 20
+    new Question(`Predstavlja sve što stoji ispred vitičastih zagrada?`, [`value`, `deklaracija`, `selector`, `property`], `selector`, 5, `CSS`),
+    new Question(`Vrednost osobine izražene u nekoj od mernih jedinica?`, [`value`, `deklaracija`, `selector`, `property`], `value`, 5, `CSS`),
+    new Question(`Osobina koju želimo da definišemo?`, [`value`, `deklaracija`, `selector`, `property`], `property`, 5, `CSS`),
+    new Question(`Umetnuti (inline) stilovi?`, [`Postavljaju se izvan HTML`, `Postavljaju se unutar HTML`, `Na drugoj stranici`, `Na drugom serveru`], `Postavljaju se unutar HTML`, 5, `CSS`),
+    new Question(`Atribut koji definiše putanju do eksternog fajla je?`, [`value`, `rel`, `href`, `property`], `href`, 5, `CSS`),
+    new Question(`Jedan linkovan CSS fajl može deliti neograničeni broj HTML stranica?`, [`Da`, `Ne`, `Mozda`, `Nikako`], `Da`, 5, `CSS`),
+    new Question(`Klase u CSS-u se oznacavaju sa?`, [`Hesh tagom`, `Crticom`, `Tackom`, `Zarezom`], `Tackom`, 5, `CSS`),
+    new Question(`Class selektor koristimo za dodeljivanje stila?`, [`Pojedinacnom elementu`, `Grupi elemenata`, `Linkovima`, `Inputima`], `Grupi elemenata`, 5, `CSS`),
+    new Question(`Kontekstualni selektor bira element na osnovu?`, [`Rodjaka`, `Roditelja`, `Istog taga`, `Boje`], `Roditelja`, 5, `CSS`),
+    new Question(`Pseudo klase su ključne reči koje se dodaju selektorima da bi definisali specijalno stanje nekog elementa?`, [`input`, `active`, `button`, `a`], `active`, 5, `CSS`),
+    new Question(`Prostor za sadržaj je?`, [`Content`, `Padding`, `Border`, `Margin`], `Content`, 5, `CSS`),
+    new Question(`Prostor između sadržaja i ivica je?`, [`Content`, `Padding`, `Border`, `Margin`], `Padding`, 5, `CSS`),
+    new Question(`Ivica elementa, može biti stilizovana je?`, [`Content`, `Padding`, `Border`, `Margin`], `Border`, 5, `CSS`),
+    new Question(`Providan spoljašnji prostor, zamišljen oko elementa?`, [`Content`, `Padding`, `Border`, `Margin`], `Margin`, 5, `CSS`),
+    new Question(`Svojstvom border-radius definisemo?`, [`Ivice elementa`, `Zaobljenja ivica elementa`, `Border`, `Margin`], `Zaobljenja ivica elementa`, 5, `CSS`),
+    new Question(`Vrednost auto za margin radi po?`, [`X osi`, `Y osi`, `Na obe ose`, `Nigde`], `X osi`, 5, `CSS`),
+    new Question(`Overflow svojstvo definiše šta se dešava sa sadržajem?`, [`Koji ostaje u granicama elementa`, `Van diva`, `U divu`, `Koji izlazi van granica elementa`], `Koji izlazi van granica elementa`, 5, `CSS`),
+    new Question(`Kada element foat-uje, drugi elementi ga?`, [`vide i nece zauzeti njegovo mesto`, `ne vide ga i nece zauzeti njegovo mesto`, `vide ga ali nece zauzeti njegovo mesto`, `ne vide i zauzeće njegovo mesto u regularnom toku`], `ne vide i zauzeće njegovo mesto u regularnom toku`, 5, `CSS`),
+    new Question(`Umesto svojstva float koristicemo?`, [`flex`, `left`, `background`, `opacity`], `flex`, 5, `CSS`),
+    new Question(`Javascript je programski jezik?`, [`Ne`, `Da`, `Samo delimicno`, `Ne znam`], `Da`, 5, `js`), //JavaScript 35
+    new Question(`JavaScript je  case-sensitive programski jezik?`, [`Ne`, `Da`, `Delimicno`, `Ne znam`], `Da`, 5, `js`),
+    new Question(`JavaScript prepoznaje razmake između svoje sintakse?`, [`Ne`, `Da`, `Delimicno`, `Ne znam`], `Ne`, 5, `js`),
+    new Question(`JavaScript varijable su?`, [`Tagovi`, `Funkcije`, `Kontejneri za čuvanje vrednosti podataka`, `Identifikatori`], `Kontejneri za čuvanje vrednosti podataka`, 5, `js`),
+    new Question(`Primitivni tipovi podataka u js su?`, [`Tagovi`, `Funkcije`, `objekti`, `boolean`], `boolean`, 5, `js`),
+    new Question(`Kompleksni tipovi podataka?`, [`Tagovi`, `Funkcije`, `brojevi`, `boolean`], `Funkcije`, 5, `js`),
+    new Question(`Javascript pravi razliku između decimalnih i okruglih brojeva?`, [`Tacno`, `Netacno`, `nesto drugo`, `Ne znam`], `Netacno`, 5, `js`),
+    new Question(`Odsustvo vrednosti u js pisemo sa?`, [`undefined`, `false`, `null`, `true`], `null`, 5, `js`),
+    new Question(`JavaScript lista je indeksno uredjeni skup vrednosti i pisemo ga sa?`, [`object`, `array`, `var`, `const`], `array`, 5, `js`),
+    new Question(`Objekti su skup vrednosti koji imaju?`, [`indexe`, `imena`, `var`, `const`], `imena`, 5, `js`),
+    new Question(`Funciju moramo pozvati da bi se izvrsila?`, [`Da`, `Ne`, `Da, ako nije samopozivajuca`, `Ne, sem ako nije object`], `Da, ako nije samopozivajuca`, 5, `js`),
+    new Question(`10 + undefine dobijamo?`, [`undefine`, `number`, `string`, `NaN`], `NaN`, 5, `js`),
+    new Question(`Metoda parseInt() vraca?`, [`broj`, `boolean`, `string`, `NaN`], `broj`, 5, `js`),
+    new Question(`Vrednost true pripada tipu podataka?`, [`number`, `boolean`, `string`, `NaN`], `boolean`, 5, `js`),
+    new Question(`If statement ce se izvrsiti samo onda kada je vrednost?`, [`false`, `true`, `null`, `NaN`], `true`, 5, `js`),
+    new Question(`Ako u if statementu hocemo da napisemo samo ako nesto nije tako pisemo?`, [`false`, `!==`, `>=`, `===`], `!==`, 5, `js`),
+    new Question(`Switch izjava na kraju mora sadrzati default?`, [`Da`, `Ne`, `Mozda`, `Nikako`], `Ne`, 5, `js`),
+    new Question(`Logički operateri su?`, [`false`, `//`, `const`, `&&`], `&&`, 5, `js`),
+    new Question(`Varijable definisane u funkciji?`, [`Vidljive su samo u bloku koda koji definiše funkcija`, `Vidljive su u celom kodu`, `Nisu vidljive`, `Nesto drugo`], `Vidljive su samo u bloku koda koji definiše funkcija`, 5, `js`),
+    new Question(`Koristimo ga da listamo sve properties objekta?`, [`while loop`, `for in loop`, `for loop`, `do while`], `for in loop`, 5, `js`),
+    new Question(`Svaki put kada se naša stranica učita u brauzeru, Javascript kreira?`, [`globalni objekat`, `document objekat`, `window objekat`, `nista od ovoga`], `window objekat`, 5, `js`),
+    new Question(`Math objektom se sluzimo kada su nam potrebne?`, [`matematicke radnje`, `funkcije`, `objekti`, `varijable`], `matematicke radnje`, 5, `js`),
+    new Question(`JavaScript kod može se izvršavati u odredjenim vremenskim intervalima sa?`, [`setOnclick`, `setTimeout`, `setFunction`, `setAlert`], `setTimeout`, 5, `js`),
+    new Question(`Uvek možemo da prekinemo setTimeout() ako pozovemo?`, [`clearOnclick()`, `setTimeout()`, `clearFunction()`, `clearTimeout()`], `clearTimeout()`, 5, `js`),
+    new Question(`Terminologija koju koristimo kada govorimo o DOM-u je preuzata iz modela?`, [`dokumenta`, `porodičnog stabla`, `atributa`, `elementa`], `porodičnog stabla`, 5, `js`),
+    new Question(`Unutar zagrade getElementsByClassName('') upisacemo?`, [`#nekoIme`, `.nekoIme`, `nekoIme`, `(nekoIme)`], `nekoIme`, 5, `js`),
+    new Question(`Unutar zagrade getElementById('') upisacemo?`, [`#nekoIme`, `.nekoIme`, `nekoIme`, `(nekoIme)`], `nekoIme`, 5, `js`),
+    new Question(`Unutar zagrade document.querySelector('') za klasu upisacemo?`, [`#nekoIme`, `.nekoIme`, `nekoIme`, `(nekoIme)`], `.nekoIme`, 5, `js`),
+    new Question(`Da promenimo vrednost nekog atributa upisacemo?`, [`getAttribute()`, `removeAttribute()`, `setAttribute()`, `changeAttribute()`], `setAttribute()`, 5, `js`),
+    new Question(`Da bismo uzeli sadrzaj nekog elementa koristicemo?`, [`element.innerHTML = "Novi naslov"`, `let text = element.innerHTML`, `element.innerHTML()`, `getInnerText()`], `let text = element.innerHTML`, 5, `js`),
+    new Question(`Metodom preventDefault()?`, [`otkazujemo event`, `dodajemo event`, `regulisemo putanju`, `menjamo funkciju`], `otkazujemo event`, 5, `js`),
+    new Question(`OOP u JS znaci?`, [`Obavezno orijentisano programiranje`, `Objektivno organizovano programiranje`, `Nista od ovoga`, `Objektno orijentisano programiranje`], `Objektno orijentisano programiranje`, 5, `js`),
+    new Question(`Svojstvo prototype se nalazi?`, [`samo u prvom kreiranom objektu`, `u svakom objektu`, `samo u kopiranom objektu`, `u svakom neparnom objektu`], `u svakom objektu`, 5, `js`),
+    new Question(`Constructor function se pise?`, [`function person()`, `Function person()`, `fun person()`, `function Person()`], `function Person()`, 5, `js`),
+    new Question(`Klase i objekti se mogu pozivati pre nego sto su kreirani?`, [`Da`, `Ne`, `Samo ponekad`, `Samo klase`], `Ne`, 5, `js`),
+];

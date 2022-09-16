@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <meta name="description" content="Kviz sa pitanjima iz veb programiranja">
+    <meta name="keywords" content="Quiz, Kviz, pitanja, programiranje, developers, questions, HTML, CSS, Javascript ">
+    <meta name="author" content="Goran Kekez">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="my-header">
+        <h1>Quiz</h1>
+    </div>
+    <div class="conteiner">
+        <button id=start-quiz>Pokreni kviz</button>
+        <div id="quiz-holder" class="row">
+            <div class="btn-holder">
+                <button id="html" class="category" title="15 pitanja">HTML</button>
+                <button id="css" class="category" title="20 pitanja">CSS</button>
+                <button id="js" class="category" title="35 pitanja">JS</button>
+            </div>
+            <button id="question" class="btn">Izaberi kategoriju.</button>
+            <div class="answer-holder">
+                <button id="answer1" class="btn answer"></button>
+                <button id="answer2" class="btn answer"></button>
+                <button id="answer3" class="btn answer"></button>
+                <button id="answer4" class="btn answer"></button>
+            </div>
+            <div class="btn-holder">
+                <button id="score" class="category">Poeni</button>
+                <button id="next" class="category">Sledece &raquo;</button>
+            </div>
+            <div id="progress">Progres</div>
+        </div>
+    </div>
+    <footer class="my-footer">
+        <small>&copy; 2022 Quiz by <a target="_blank" href="https://webdizajn.eu.org">Maxi</a>. All RightsReserved.</small>
+    </footer>
+    <script src="js/questions.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/main.js"></script>
+    <noscript>JavaScript not enabled!</noscript>
+</body>
+
+</html>
